@@ -1,0 +1,20 @@
+name: DevOps Lab Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Display welcome message
+        run: echo "Welcome to the DevOps Lab!"
+
+      - name: Display welcome.txt contents
+        run: cat welcome.txt
